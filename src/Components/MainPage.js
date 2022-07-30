@@ -1,15 +1,15 @@
-import '../App.css'
-import { Carousel } from 'react-bootstrap'
-import FirstPhoto from '../Assets/photo1.jpg'
-import SecondPhoto from '../Assets/photo2.jpg'
-import ThirdPhoto from '../Assets/photo3.jpg'
-import MainVideo from '../Assets/main_video.mp4'
+import "../App.css";
+import { Carousel } from "react-bootstrap";
+import FirstPhoto from "../Assets/photo1.jpg";
+import SecondPhoto from "../Assets/photo2.jpg";
+import ThirdPhoto from "../Assets/photo3.jpg";
+import MainVideo from "../Assets/main_video.mp4";
 
 function MainPage() {
   return (
     <>
-      <div style={{width: '100%', height: '1px', backgroundColor: 'white'}} />
-      <video width='100%' muted loop playsInline autoPlay>
+      <div style={{ width: "100%", height: "1px", backgroundColor: "white" }} />
+      <video width="100%" muted loop playsInline autoPlay>
         <source src={MainVideo} type="video/mp4" />
       </video>
     </>
@@ -42,7 +42,7 @@ function MainPage() {
     //     />
     //   </Carousel.Item>
     // </Carousel>
-  )
+  );
 }
 
-export default MainPage
+export default MainPage;
