@@ -1,38 +1,267 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&family=Rochester&display=swap');
+
+body {
+  overflow-x: hidden;
+}
+
+.navBar-bg {
+  background-color: black;
+  color: white;
+  margin: 0px 10px 20px 10px;
+  border-radius: 10px;
+}
+
+.colCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.iconBg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 2rem;
+  padding: 0.5rem;
+}
+
+.iconFA {
+  width: 2rem;
+  height: 2rem;
+  color: black;
+}
+
+.outerImage {
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 900px;
+}
+
+.innerImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Opening Word Start */
+.OpeningWord-layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.topflower-size {
+  width: 15rem;
+  height: 6rem;
+  margin-right: 1rem;
+}
+
+.OpeningWord-size {
+  max-width: 400px;
+}
+
+.OpeningTitle {
+  font-family: 'Rochester', cursive;
+  font-size: 2rem;
+}
+
+.OpeningContent {
+  font-family: 'Bellefair', serif;
+  font-size: 1rem;
+}
+/* Opening Word End */
+
+/* Groom Bride Start */
+.GroomBride-layout {
+  padding: 2rem;
+}
+
+.AnG-size {
+  width: 7rem;
+  height: 7rem;
+}
+
+.groomandbride-tobe {
+  font-family: 'Rochester', cursive;
+  font-size: 3rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.groomandbride-area {
+  display: flex;
+  flex-direction: row;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.groomphoto-size,
+.bridephoto-size {
+  width: 23rem;
+  height: 23rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.groomword-area,
+.brideword-area {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin-top: -2rem;
+  z-index: 10;
 }
 
-.App-link {
-  color: #61dafb;
+.brideword-area {
+  margin-top: 0rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.groom-name,
+.bride-name {
+  font-family: 'Rochester', cursive;
+  font-size: 2.2rem;
+  text-align: center;
+  max-width: 20rem;
+}
+
+.groom-parents,
+.bride-parents {
+  font-family: 'Bellefair', serif;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.name-divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Rochester', cursive;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: -1rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  z-index: 10;
+}
+/* Groom Bride End */
+
+/* Event Date Start */
+.EventDate-layout {
+  padding: 2rem;
+}
+
+.eventdate-title {
+  font-family: 'Rochester', cursive;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.eventdate-content {
+  font-family: 'Bellefair', serif;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.eventdate-layout {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.eventdate-eacharea {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  background-color: aquamarine;
+  margin-left: 1rem;
+  margin-right: 1rem;
+
+  font-family: 'Bellefair', serif;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 2rem;
+}
+
+.eventdate-info {
+  font-family: 'Bellefair', serif;
+  font-size: 1.5rem;
+  text-align: center;
+}
+/* Event Date End */
+
+@media screen and (max-width: 768px) {
+  .navBar-bg {
+    margin: 0px 5px 10px 5px;
+    border-radius: 5px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .colCenter {
+    margin-left: 0rem;
+    margin-right: 0rem;
+    font-size: 0.5rem;
   }
+
+  .iconBg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 1rem;
+    padding: 0.3rem;
+  }
+
+  .iconFA {
+    width: 1rem;
+    height: 1rem;
+    color: black;
+  }
+
+  /* Opening Word Start */
+  .OpeningWord-layout {
+    flex-direction: column;
+  }
+
+  .OpeningWord-size {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .OpeningTitle {
+    font-size: 3rem;
+  }
+  /* Opening Word End */
+
+  /* Groom Bride Start */
+  .groomandbride-area {
+    flex-direction: column;
+  }
+
+  .brideword-area {
+    margin-top: -2rem;
+  }
+  /* Groom Bride End */
+
+  /* Event Date Start */
+  .eventdate-eacharea {
+    font-size: 0.5rem;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+  }
+
+  .eventdate-info {
+    font-size: 1rem;
+  }
+  /* Event Date End */
 }
