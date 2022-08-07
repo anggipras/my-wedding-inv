@@ -7,6 +7,7 @@ import OpeningWord from "./Components/OpeningWord";
 import GroomBride from "./Components/GroomBride";
 import EventDate from "./Components/EventDate";
 import EventLocation from "./Components/EventLocation";
+import OurGallery from "./Components/OurGalley";
 import { useEffect, useState } from "react";
 import { AoS } from "./Util/Aos";
 import "aos/dist/aos.css";
@@ -20,12 +21,13 @@ function App() {
 
   return (
     <div>
-      {/* <Header setId={setId} /> */}
+      <Header setId={setId} />
       <MainPage currentId={id} />
       <OpeningWord />
       <GroomBride currentId={id} />
       <EventDate currentId={id} />
       <EventLocation />
+      <OurGallery currentId={id} />
     </div>
   );
 }

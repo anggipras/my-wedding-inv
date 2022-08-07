@@ -1,5 +1,4 @@
 import MediaQuery from "../Util/MediaQuery";
-import backgroundImg from "../Assets/greenpastel1.jpg"
 
 function EventLocation() {
   const openMapTab = (url) => {
@@ -18,19 +17,34 @@ function EventLocation() {
         justifyContent: "center",
         alignItems: "center",
         padding: "3rem 0rem",
-        backgroundImage: `url(${backgroundImg})`,
-        backgroundSize: "100% 100%"
+        backgroundColor: MediaQuery().isMobile ? "" : "f2f3ee",
+        backgroundImage: MediaQuery().isMobile
+          ? `url(${require("../Assets/greenpastel4.jpg")})`
+          : "",
+        backgroundSize: "100% 100%",
       }}
     >
       <div className="eventlocation_title" style={{ fontSize: "2rem" }}>
         WEDDING LOCATION
       </div>
+      <span
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "20rem",
+        }}
+      >
+        <img width="100%" src={require("../Assets/titledivider.png")} alt="" />
+      </span>
 
       <div
         className="eventlocation_layout"
         style={{ ...styled_component.eventlocation_layout }}
       >
-        <div style={{ marginBottom: "1rem" }}>LOCATION HOLY MATRIMONY</div>
+        <div style={{ ...styled_component.eventlocation_smalltitle }}>
+          LOCATION HOLY MATRIMONY
+        </div>
         <iframe
           style={{ borderRadius: "10px" }}
           title="Holy Matrimony Location"
@@ -59,7 +73,9 @@ function EventLocation() {
         className="eventlocation_layout"
         style={{ ...styled_component.eventlocation_layout }}
       >
-        <div style={{ marginBottom: "1rem" }}>LOCATION WEDDING CELEBRATION</div>
+        <div style={{ ...styled_component.eventlocation_smalltitle }}>
+          LOCATION WEDDING CELEBRATION
+        </div>
         <iframe
           style={{ borderRadius: "10px" }}
           title="Wedding Celebration Location"
@@ -97,13 +113,19 @@ const styled_component = {
     marginTop: "4rem",
   },
   eventlocation_seemaps: {
-    backgroundColor: "#b8d8be",
+    backgroundColor: "#a3ddcc",
     borderRadius: "15px",
     textAlign: "center",
     cursor: "pointer",
     padding: "0.5rem 0rem",
     color: "white",
     marginTop: "2rem",
+  },
+  eventlocation_smalltitle: {
+    marginBottom: "1rem",
+    border: "1px solid black",
+    borderRadius: "10px",
+    padding: "0.5rem",
   },
 };
 

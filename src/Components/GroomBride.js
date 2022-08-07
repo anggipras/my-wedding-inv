@@ -2,11 +2,10 @@ import "../App.css";
 import AnG from "../Assets/ang.png";
 import Groom from "../Assets/anggimain.png";
 import Bride from "../Assets/goldamain.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHashtag } from "@fortawesome/free-solid-svg-icons";
 import MediaQuery from "../Util/MediaQuery";
 import { useEffect } from "react";
 import { ClickHeader } from "../Util/HeaderMethod";
+import { Instagram } from "@mui/icons-material";
 
 function GroomBride({ currentId }) {
   useEffect(() => {
@@ -14,6 +13,15 @@ function GroomBride({ currentId }) {
       ClickHeader(currentId.evt);
     }
   }, [currentId]);
+
+  const goToIG = (param) => {
+    window.open(
+      param === "groom"
+        ? "https://www.instagram.com/anggipras30/"
+        : "https://www.instagram.com/goldalande/",
+      "_blank"
+    );
+  };
 
   return (
     <div
@@ -40,7 +48,9 @@ function GroomBride({ currentId }) {
             <div data-aos="fade-zoom-in" className="groom-parents">
               First Person of Bapak Petrus Hariyadi <br /> & Ibu Irene Suryati
             </div>
-            <FontAwesomeIcon className="iconFAInsta" icon={faHashtag} />
+            <div style={{ cursor: "pointer" }} onClick={() => goToIG("groom")}>
+              <Instagram sx={{ fontSize: "1.5rem" }} />
+            </div>
           </div>
         </div>
         <div className="name-divider">and</div>
@@ -59,7 +69,9 @@ function GroomBride({ currentId }) {
             <div data-aos="fade-zoom-in" className="bride-parents">
               First Person of Bapak Yunus Lande <br /> & Ibu Rosalina Sallata
             </div>
-            <FontAwesomeIcon className="iconFAInsta" icon={faHashtag} />
+            <div style={{ cursor: "pointer" }} onClick={() => goToIG("bride")}>
+              <Instagram sx={{ fontSize: "1.5rem" }} />
+            </div>
           </div>
         </div>
       </div>
