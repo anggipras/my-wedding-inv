@@ -12,6 +12,7 @@ function MainPage({ currentId }) {
     if (currentId != null) {
       ClickHeader(currentId.evt);
     }
+    document.getElementById("vid").play();
   }, [currentId]);
 
   return (
@@ -23,7 +24,7 @@ function MainPage({ currentId }) {
           backgroundColor: "white",
         }}
       />
-      <video width="100%" muted loop playsInline autoPlay>
+      <video id="vid" width="100%" playsInline autoPlay muted loop>
         <source src={MainVideo} type="video/mp4" />
       </video>
       {/* <Carousel
