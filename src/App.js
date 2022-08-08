@@ -18,6 +18,7 @@ function App() {
   const [id, setId] = useState(null);
   const [percentage, setPercentage] = useState(0);
   const [readyPage, setReadyPage] = useState(false);
+  const [showHeader, setShowHeader] = useState(false);
 
   useEffect(() => {
     AoS();
@@ -32,24 +33,57 @@ function App() {
     }, 1500);
     setTimeout(() => {
       setPercentage(100);
-    }, 2000);
+    }, 2500);
     setTimeout(() => {
       setReadyPage(true);
-    }, 2500);
+    }, 3000);
   }, []);
+
+  useEffect(() => {
+    if (showHeader) {
+      document.body.style.overflowY = "visible";
+    } else {
+      document.body.style.overflowY = "hidden";
+    }
+  }, [showHeader]);
+
+  const openInv = () => {
+    setShowHeader(true);
+  };
 
   return (
     <>
       {readyPage ? (
-        <div>
-          <Header setId={setId} />
-          <MainPage currentId={id} />
-          <OpeningWord />
-          <GroomBride currentId={id} />
-          <EventDate currentId={id} />
-          <EventLocation />
-          <OurGallery currentId={id} />
-        </div>
+        <>
+          <div
+            style={{
+              display: "flex",
+              position: "absolute",
+              top: 0,
+              left: 0,
+              justifyContent: "center",
+              alignItems: "center",
+              width: "100vw",
+              height: "100vh",
+              zIndex: "100",
+              backgroundColor: "white",
+              opacity: "1",
+              transform: showHeader ? "translateY(-100%)" : "translateY(0%)",
+              transition: "transform 0.5s, opacity 0.5s",
+            }}
+          >
+            <button onClick={() => openInv()}>Buka Undangan</button>
+          </div>
+          <div>
+            <Header showHeader={showHeader} setId={setId} />
+            <MainPage currentId={id} />
+            <OpeningWord />
+            <GroomBride currentId={id} />
+            <EventDate currentId={id} />
+            <EventLocation />
+            <OurGallery currentId={id} />
+          </div>
+        </>
       ) : (
         <div
           style={{

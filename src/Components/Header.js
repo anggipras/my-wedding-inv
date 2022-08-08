@@ -15,7 +15,12 @@ function Header(props) {
   };
 
   return (
-    <Navbar className="navBar-bg" expand="sm" fixed="bottom">
+    <Navbar
+      style={{ display: props.showHeader ? "block" : "none" }}
+      className="navBar-bg"
+      expand="sm"
+      fixed="bottom"
+    >
       <Container className="justify-content-center">
         <Row className="mt-1 mb-1" style={{ width: "100%" }}>
           <Col
