@@ -30,20 +30,17 @@ function App() {
     setTimeout(() => {
       setPercentage(70);
     }, 1500);
+    document.onreadystatechange = () => {
+      if (document.readyState === "complete") {
+        setTimeout(() => {
+          setPercentage(100);
+        }, 2000);
+        setTimeout(() => {
+          setReadyPage(true);
+        }, 2500);
+      }
+    };
   }, []);
-
-  document.onreadystatechange = () => {
-    if (document.readyState === "complete") {
-      setTimeout(() => {
-        setPercentage(100);
-      }, 2000);
-      setTimeout(() => {
-        setReadyPage(true);
-      }, 2500);
-    } else {
-      setReadyPage(false);
-    }
-  };
 
   return (
     <>
