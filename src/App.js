@@ -13,6 +13,8 @@ import { AoS } from "./Util/Aos";
 import "aos/dist/aos.css";
 import { buildStyles, CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
+import LiveStreaming from "./Components/LiveStreaming";
+import WeddingGift from "./Components/WeddingGift";
 
 function App() {
   const [id, setId] = useState(null);
@@ -75,13 +77,15 @@ function App() {
             <button onClick={() => openInv()}>Buka Undangan</button>
           </div>
           <div>
-            <Header showHeader={showHeader} setId={setId} />
+            {/* <Header showHeader={showHeader} setId={setId} /> */}
             <MainPage currentId={id} />
             <OpeningWord />
             <GroomBride currentId={id} />
             <EventDate currentId={id} />
             <EventLocation />
             <OurGallery currentId={id} />
+            <LiveStreaming />
+            <WeddingGift />
           </div>
         </>
       ) : (

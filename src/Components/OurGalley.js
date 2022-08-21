@@ -72,6 +72,28 @@ function OurGallery({ currentId }) {
           width: "80%",
         }}
       >
+        <div
+          className="eventlocation_title"
+          style={{ fontSize: "2rem", marginTop: "2rem" }}
+        >
+          OUR GALLERY
+        </div>
+        <span
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            width: "17rem",
+            marginBottom: "1rem",
+          }}
+        >
+          <img
+            width="100%"
+            src={require("../Assets/titledivider.png")}
+            alt=""
+          />
+        </span>
+
         <div class="swiper-container gallery-top">
           <div class="swiper-wrapper">
             <div class="swiper-slide">

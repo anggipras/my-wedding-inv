@@ -1,8 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Bellefair&family=Rochester&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Quicksand");
+@import url("https://fonts.googleapis.com/css2?family=Marck+Script&display=swap");
 
 body {
   overflow-x: hidden;
+}
+
+.fontFam-quicksand {
+  font-family: "Quicksand", serif;
 }
 
 .navBar-bg {
@@ -280,6 +285,30 @@ body {
   opacity: 1;
 }
 /* Our Gallery End */
+
+/* Live Streaming Start */
+.liveStreaming-icon {
+  animation: zoom-in-zoom-out-ls 2.2s ease infinite;
+}
+
+@keyframes zoom-in-zoom-out-ls {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.liveStreaming-gb {
+  font-family: "Marck Script", serif;
+  font-size: 2rem;
+  text-align: center;
+}
+/* Live Streaming End */
 
 @media screen and (max-width: 768px) {
   .navBar-bg {
