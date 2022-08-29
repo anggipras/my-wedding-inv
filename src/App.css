@@ -290,6 +290,13 @@ body {
 .liveStreaming-icon {
   animation: zoom-in-zoom-out-ls 2.2s ease infinite;
 }
+/* Live Streaming End */
+
+/* Live Wishes Start */
+.wishes-head:hover {
+  color: gray;
+}
+/* Live Wishes End */
 
 @keyframes zoom-in-zoom-out-ls {
   0% {

@@ -20,10 +20,12 @@
     "react-bootstrap": "^2.4.0",
     "react-circular-progressbar": "^2.1.0",
     "react-dom": "^18.1.0",
+    "react-loader-spinner": "^5.3.3",
     "react-responsive": "^9.0.0-beta.10",
     "react-router-dom": "^5.2.0",
     "react-scripts": "5.0.1",
     "slick-carousel": "^1.8.1",
+    "sweetalert2": "^11.4.29",
     "swiper": "5.4",
     "web-vitals": "^2.1.4"
   },

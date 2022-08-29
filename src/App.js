@@ -15,6 +15,7 @@ import { buildStyles, CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import LiveStreaming from "./Components/LiveStreaming";
 import WeddingGift from "./Components/WeddingGift";
+import Wishes from "./Components/Wishes";
 
 function App() {
   const [id, setId] = useState(null);
@@ -86,6 +87,7 @@ function App() {
             <OurGallery currentId={id} />
             <LiveStreaming />
             <WeddingGift />
+            <Wishes />
           </div>
         </>
       ) : (
