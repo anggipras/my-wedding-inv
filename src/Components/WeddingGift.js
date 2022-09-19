@@ -1,11 +1,10 @@
 import { useState } from "react";
 import "../App.css";
-import { CardGiftcard } from "@mui/icons-material";
 import MediaQuery from "../Util/MediaQuery";
 import Modal from "react-bootstrap/Modal";
 import Accordion from "react-bootstrap/Accordion";
 import { useAccordionButton } from "react-bootstrap/AccordionButton";
-import { Add, ContentCopy } from "@mui/icons-material";
+import { Add, ContentCopy, CardGiftcard } from "@mui/icons-material";
 
 function CustomToggle({ children, eventKey, setCopy }) {
   const decoratedOnClick = useAccordionButton(eventKey, () => setCopy());
