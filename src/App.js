@@ -36,8 +36,10 @@ function App() {
   const [showHeader, setShowHeader] = useState(false);
   const [playAudio, setPlayAudio] = useState(true);
   const [guestName, setGuestName] = useState("");
+  const [isScrolling, setIsScrolling] = useState(false);
   let music = document.getElementById("weddingAudio");
   let mediaQueryMobile = useMediaQuery({ query: "(max-width: 768px)" });
+  let timeout = null;
 
   useEffect(() => {
     AoS();
@@ -58,7 +60,19 @@ function App() {
     }, 3000);
     const toGuest = new URLSearchParams(window.location.search).get("to");
     setGuestName(toGuest);
+    document.addEventListener("scroll", onScrollHeader);
+    return () => {
+      document.removeEventListener("scroll", onScrollHeader);
+    };
   }, []);
+
+  const onScrollHeader = () => {
+    setIsScrolling(true);
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      setIsScrolling(false);
+    }, 300);
+  };
 
   useEffect(() => {
     if (showHeader) {
@@ -137,28 +151,42 @@ function App() {
                 alt=""
               />
             )}
-            <div className="groombride-name mb-5">Anggi & Golda</div>
-            <div className="fontFam-quicksand fontBold whiteColor my-2">
-              Kepada Bapak/Ibu/Saudara/i
-            </div>
             <div
-              className="fontFam-quicksand fontBold whiteColor my-2"
-              style={{ fontSize: "1.5rem" }}
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "flex-end",
+                alignItems: "center",
+                paddingBottom: "7rem",
+              }}
             >
-              {guestName}
+              <div className="groombride-name mb-5">Anggi & Golda</div>
+              <div className="fontFam-quicksand fontBold whiteColor my-2">
+                Kepada Bapak/Ibu/Saudara/i
+              </div>
+              <div
+                className="fontFam-quicksand fontBold whiteColor my-2"
+                style={{ fontSize: "1.5rem" }}
+              >
+                {guestName}
+              </div>
+              <div
+                className="fontFam-quicksand whiteColor my-2"
+                style={{ textAlign: "center" }}
+              >
+                Mohon maaf bila ada kesalahan pada penulisan nama/gelar
+              </div>
+              <button className="open-inv-button" onClick={() => openInv()}>
+                Buka Undangan
+              </button>
             </div>
-            <div
-              className="fontFam-quicksand whiteColor my-2"
-              style={{ textAlign: "center" }}
-            >
-              Mohon maaf bila ada kesalahan pada penulisan nama/gelar
-            </div>
-            <button className="open-inv-button mb-5" onClick={() => openInv()}>
-              Buka Undangan
-            </button>
           </div>
           <div>
-            <Header showHeader={showHeader} setId={setId} />
+            {!isScrolling ? (
+              <Header showHeader={showHeader} setId={setId} />
+            ) : (
+              <></>
+            )}
             <MainPage currentId={id} />
             <OpeningWord />
             <GroomBride currentId={id} />

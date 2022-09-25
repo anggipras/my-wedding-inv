@@ -48,6 +48,11 @@ body {
   margin: 0px 10px 20px 10px;
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+
+  -webkit-animation-name: animacartfade;
+  -webkit-animation-duration: 0.5s;
+  animation-name: animacartfade;
+  animation-duration: 0.5s;
 }
 
 .colCenter {
@@ -128,18 +133,6 @@ body {
   width: 7rem;
   height: 7rem;
   animation: zoom-in-zoom-out 2.2s ease infinite;
-}
-
-@keyframes zoom-in-zoom-out {
-  0% {
-    transform: scale(1, 1);
-  }
-  50% {
-    transform: scale(1.2, 1.2);
-  }
-  100% {
-    transform: scale(1, 1);
-  }
 }
 
 .groomandbride-tobe {
@@ -322,6 +315,12 @@ body {
 .liveStreaming-icon {
   animation: zoom-in-zoom-out-ls 2.2s ease infinite;
 }
+
+.liveStreaming-gb {
+  font-family: "Marck Script", serif;
+  font-size: 2rem;
+  text-align: center;
+}
 /* Live Streaming End */
 
 /* Live Wishes Start */
@@ -329,6 +328,40 @@ body {
   color: gray;
 }
 /* Live Wishes End */
+
+@-webkit-keyframes animacartfade {
+  from {
+    bottom: -300px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animacartfade {
+  from {
+    bottom: -300px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.2, 1.2);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
 
 @keyframes zoom-in-zoom-out-ls {
   0% {
@@ -341,13 +374,6 @@ body {
     transform: scale(1, 1);
   }
 }
-
-.liveStreaming-gb {
-  font-family: "Marck Script", serif;
-  font-size: 2rem;
-  text-align: center;
-}
-/* Live Streaming End */
 
 @media screen and (max-width: 768px) {
   .navBar-bg {
