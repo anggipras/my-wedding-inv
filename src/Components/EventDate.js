@@ -53,6 +53,10 @@ function EventDate({ currentId }) {
     return MediaQuery().isMobile ? "0rem" : "0rem 2rem";
   };
 
+  const remindInCalendar = (url) => {
+    window.open(url, "_blank");
+  };
+
   return (
     <>
       <div
@@ -215,6 +219,11 @@ function EventDate({ currentId }) {
               style={{
                 ...styled_component.event_place_button,
               }}
+              onClick={() =>
+                remindInCalendar(
+                  "https://calendar.google.com/calendar/u/0/r/eventedit?text=Anggi+%26+Golda+Holy+Matrimony&dates=20230304T090000/20230304T110000&ctz=Asia/Makassar&details&location=https://goo.gl/maps/ccRHEjfrrCiiAAhw8&pli=1&uid=1521339627addtocalendar&sf=true&output=xml"
+                )
+              }
             >
               Save Holy Matrimony
             </div>
@@ -317,6 +326,11 @@ function EventDate({ currentId }) {
               style={{
                 ...styled_component.event_place_button,
               }}
+              onClick={() =>
+                remindInCalendar(
+                  "https://calendar.google.com/calendar/u/0/r/eventedit?text=Anggi+%26+Golda+Wedding+Celebration&dates=20230304T110000/20230304T130000&ctz=Asia/Makassar&details&location=https://goo.gl/maps/Ho95S7aRfvaEP3kDA&pli=1&uid=1521339627addtocalendar&sf=true&output=xml"
+                )
+              }
             >
               Save Wedding Celebration
             </div>
