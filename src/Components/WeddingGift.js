@@ -43,12 +43,12 @@ function WeddingGiftModal(props) {
         <div className="fontFam-quicksand">{name}</div>
         <div className="fontFam-quicksand">Bank {bank}</div>
         <div className="fontFam-quicksand">{norek}</div>
-        {copyButton()}
+        {copyButton(norek)}
       </div>
     );
   };
 
-  const copyButton = () => {
+  const copyButton = (norek) => {
     return (
       <div
         style={{
@@ -80,7 +80,7 @@ function WeddingGiftModal(props) {
             color: "black",
             marginLeft: ".3rem",
           }}
-          onClick={() => doneCopied()}
+          onClick={() => doneCopied(norek)}
         >
           {copied}
         </div>
@@ -88,8 +88,9 @@ function WeddingGiftModal(props) {
     );
   };
 
-  const doneCopied = () => {
+  const doneCopied = (norek) => {
     setCopied("Berhasil salin");
+    navigator.clipboard.writeText(norek);
     setTimeout(() => {
       setCopied("Copy");
     }, 2000);
@@ -136,7 +137,7 @@ function WeddingGiftModal(props) {
               FOR THE BRIDE
             </CustomToggle>
             <Accordion.Collapse eventKey="1">
-              {giftContent("Golda Lande", "BCA", "8020413736")}
+              {giftContent("Golda Lande", "BCA Digital", "008251607333")}
             </Accordion.Collapse>
           </div>
         </Accordion>

@@ -13,6 +13,8 @@ import ReactPaginate from "react-paginate";
 import axios from "axios";
 import moment from "moment";
 import "moment/locale/id";
+import MediaQuery from "../Util/MediaQuery";
+import { ClickHeader } from "../Util/HeaderMethod";
 
 function LoadingModal(props) {
   return (
@@ -44,10 +46,10 @@ function LoadingModal(props) {
   );
 }
 
-function Wishes() {
+function Wishes({ currentId, guestName }) {
   const [loadingModal, setLoadingModal] = useState(false);
   const [wishesData, setWishesData] = useState({
-    person_name: "",
+    person_name: guestName,
     wishes: "",
     attendance: null,
   });
@@ -61,20 +63,35 @@ function Wishes() {
       createdAt: "",
     },
   ]);
+  const [totalItem, setTotalItem] = useState(0);
   const [totalPage, setTotalPage] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
+    getWishesData();
+  }, [currentPage]);
+
+  useEffect(() => {
+    if (currentId != null) {
+      ClickHeader(currentId.evt);
+    }
+  }, [currentId]);
+
+  const getWishesData = () => {
     axios
-      .get(`http://localhost:8080/api/weddingwish?page=${currentPage}`)
+      .get(
+        `https://anggi-golda-wedding-api.herokuapp.com/api/weddingwish?page=${currentPage}`
+      )
       .then((res) => {
-        setTotalPage(res.data.totalPages);
-        setWishesResponseData(res.data.wishesData);
+        const { totalPages, totalItems, wishesData } = res.data;
+        setTotalPage(totalPages);
+        setTotalItem(totalItems);
+        setWishesResponseData(wishesData);
       })
       .catch((err) => {
         console.log(err);
       });
-  }, [currentPage]);
+  };
 
   const swalAlert = (str) => {
     let timerInterval;
@@ -96,16 +113,32 @@ function Wishes() {
   const sendWish = () => {
     if (wishesData.attendance === null) {
       swalAlert("Konfirmasi kehadiran juga ya");
+    } else {
+      fetchWishAPI();
     }
-
-    fetchWishAPI();
   };
 
   const fetchWishAPI = () => {
     setLoadingModal(true);
-    setTimeout(() => {
-      setLoadingModal(false);
-    }, 3000);
+    axios
+      .post(
+        "https://anggi-golda-wedding-api.herokuapp.com/api/weddingwish",
+        wishesData
+      )
+      .then(() => {
+        setLoadingModal(false);
+        setWishesData({
+          ...wishesData,
+          person_name: "",
+          wishes: "",
+        });
+        setCurrentPage(1);
+        getWishesData();
+      })
+      .catch((err) => {
+        console.log(err);
+        setLoadingModal(false);
+      });
   };
 
   const handlePageClick = (event) => {
@@ -177,11 +210,12 @@ function Wishes() {
   };
 
   return (
-    <div>
+    <div style={{ marginBottom: "6rem" }}>
       <div
+        id="wishes"
         style={{
           borderRadius: "1rem",
-          margin: "1rem",
+          margin: MediaQuery().isMobile ? "1rem" : "5rem",
           backgroundColor: "#a3ddcc",
         }}
       >
@@ -200,7 +234,7 @@ function Wishes() {
               className="fontFam-quicksand ms-2"
               style={{ fontWeight: "bold" }}
             >
-              77 Wishes
+              {totalItem} Wishes
             </div>
           </div>
         </div>
@@ -212,6 +246,7 @@ function Wishes() {
             onChange={(e) =>
               setWishesData({ ...wishesData, person_name: e.target.value })
             }
+            value={wishesData.person_name}
             style={{
               borderRadius: "0.2rem",
             }}
@@ -223,6 +258,7 @@ function Wishes() {
             onChange={(e) =>
               setWishesData({ ...wishesData, wishes: e.target.value })
             }
+            value={wishesData.wishes}
             style={{
               borderRadius: "0.2rem",
             }}
@@ -266,15 +302,27 @@ function Wishes() {
             {wishesRespData()}
 
             <div style={{ borderTop: "1px solid gray" }} />
-            <div className="wishes-pagination">
+            <div className="d-flex justify-content-center align-items-center mt-3">
               <ReactPaginate
                 breakLabel="..."
-                nextLabel="next >"
+                forcePage={currentPage - 1}
+                nextLabel=">"
                 onPageChange={handlePageClick}
+                marginPagesDisplayed={0}
                 pageRangeDisplayed={5}
                 pageCount={totalPage}
-                previousLabel="< previous"
+                previousLabel="<"
                 renderOnZeroPageCount={null}
+                pageClassName="page-item"
+                pageLinkClassName="page-link"
+                previousClassName="page-item"
+                previousLinkClassName="page-link"
+                nextClassName="page-item"
+                nextLinkClassName="page-link"
+                breakClassName="page-item"
+                breakLinkClassName="page-link"
+                containerClassName="pagination"
+                activeClassName="active"
               />
             </div>
           </div>
