@@ -2,6 +2,13 @@ import "../App.css";
 import { YouTube } from "@mui/icons-material";
 
 function LiveStreaming() {
+  const openYoutube = () => {
+    window.open(
+      "https://www.youtube.com/channel/UCQAoujLV2ZSMfeHpvGorZOA",
+      "_blank"
+    );
+  };
+
   return (
     <div
       style={{
@@ -76,6 +83,7 @@ function LiveStreaming() {
                 justifyContent: "center",
                 alignItems: "center",
               }}
+              onClick={() => openYoutube()}
             >
               <YouTube sx={{ fontSize: "2rem", color: "white" }} />
             </span>
@@ -86,6 +94,7 @@ function LiveStreaming() {
                 color: "white",
                 marginLeft: "1rem",
               }}
+              onClick={() => openYoutube()}
             >
               Live YouTube
             </div>
