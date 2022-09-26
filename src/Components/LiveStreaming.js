@@ -61,9 +61,11 @@ function LiveStreaming() {
             alignItems: "center",
           }}
         >
-          <YouTube
-            sx={{ fontSize: "7rem", color: "#a3ddcc", cursor: "pointer" }}
-          />
+          <div onClick={() => openYoutube()}>
+            <YouTube
+              sx={{ fontSize: "7rem", color: "#a3ddcc", cursor: "pointer" }}
+            />
+          </div>
           <div
             style={{
               display: "flex",
@@ -83,7 +85,6 @@ function LiveStreaming() {
                 justifyContent: "center",
                 alignItems: "center",
               }}
-              onClick={() => openYoutube()}
             >
               <YouTube sx={{ fontSize: "2rem", color: "white" }} />
             </span>
