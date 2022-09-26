@@ -35,6 +35,7 @@ function App() {
   const [readyPage, setReadyPage] = useState(false);
   const [showHeader, setShowHeader] = useState(false);
   const [playAudio, setPlayAudio] = useState(true);
+  const [playVideo, setPlayVideo] = useState(false);
   const [guestName, setGuestName] = useState("");
   const [isScrolling, setIsScrolling] = useState(false);
   let music = document.getElementById("weddingAudio");
@@ -93,6 +94,7 @@ function App() {
 
   const openInv = () => {
     setShowHeader(true);
+    setPlayVideo(true);
   };
 
   const controlAudio = () => {
@@ -187,7 +189,7 @@ function App() {
             ) : (
               <></>
             )}
-            <MainPage currentId={id} />
+            <MainPage currentId={id} vidCond={playVideo} />
             <OpeningWord />
             <GroomBride currentId={id} />
             <EventDate currentId={id} />

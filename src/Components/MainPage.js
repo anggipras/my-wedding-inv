@@ -7,12 +7,13 @@ import MainVideo from "../Assets/main_video.mp4";
 import { useEffect } from "react";
 import { ClickHeader } from "../Util/HeaderMethod";
 
-function MainPage({ currentId }) {
+function MainPage({ currentId, vidCond }) {
   useEffect(() => {
-    // window.onload = function () {
-    //   document.getElementById("mainvideo").play();
-    // };
-  }, []);
+    // window.onload = function () {};
+    if (vidCond) {
+      document.getElementById("mainvideo").play();
+    }
+  }, [vidCond]);
 
   useEffect(() => {
     if (currentId != null) {
@@ -29,7 +30,7 @@ function MainPage({ currentId }) {
           backgroundColor: "white",
         }}
       />
-      <video id="mainvideo" width="100%" autoPlay muted loop playsInline>
+      <video id="mainvideo" width="100%" muted loop>
         <source src={MainVideo} type="video/mp4" />
       </video>
       {/* <Carousel
