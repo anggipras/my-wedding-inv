@@ -267,7 +267,7 @@ function Wishes({ currentId, guestName }) {
             className="fontFam-quicksand w-100 mb-4 p-1"
           />
           <select
-            onClick={(e) =>
+            onChange={(e) =>
               setWishesData({
                 ...wishesData,
                 attendance: e.target.value === "true" ? true : false,
