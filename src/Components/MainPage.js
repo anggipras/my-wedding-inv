@@ -9,10 +9,15 @@ import { ClickHeader } from "../Util/HeaderMethod";
 
 function MainPage({ currentId }) {
   useEffect(() => {
+    // window.onload = function () {
+    //   document.getElementById("mainvideo").play();
+    // };
+  }, []);
+
+  useEffect(() => {
     if (currentId != null) {
       ClickHeader(currentId.evt);
     }
-    document.getElementById("vid").play();
   }, [currentId]);
 
   return (
@@ -24,7 +29,7 @@ function MainPage({ currentId }) {
           backgroundColor: "white",
         }}
       />
-      <video id="vid" width="100%" playsInline autoPlay muted loop>
+      <video id="mainvideo" width="100%" autoPlay muted loop playsInline>
         <source src={MainVideo} type="video/mp4" />
       </video>
       {/* <Carousel
