@@ -50,7 +50,7 @@ function Header(props) {
             </div>
             Event
           </Col>
-          <Col
+          {/* <Col
             className="colCenter"
             onClick={() => onClickHeader({ evt: "gallery" })}
           >
@@ -58,7 +58,7 @@ function Header(props) {
               <FontAwesomeIcon className="iconFA" icon={faImages} />
             </div>
             Gallery
-          </Col>
+          </Col> */}
           <Col
             className="colCenter"
             onClick={() => onClickHeader({ evt: "wishes" })}

@@ -45,6 +45,10 @@ function EventDate({ currentId }) {
     }
   }, [currentId]);
 
+  const openMapTab = (url) => {
+    window.open(url, "_blank");
+  };
+
   const fontSizeContent = () => {
     return MediaQuery().isMobile ? "1rem" : "1.2rem";
   };
@@ -180,7 +184,7 @@ function EventDate({ currentId }) {
                     fontSize: fontSizeContent(),
                   }}
                 >
-                  9 AM
+                  11:00 WITA
                 </div>
                 <AccessAlarmOutlined sx={{ fontSize: "2.5rem" }} />
               </div>
@@ -204,10 +208,10 @@ function EventDate({ currentId }) {
                   }}
                 >
                   <div className="holy_matrimony_content_location_church">
-                    GEREJA JEMAAT EFRATA
+                    Gedung GEPSULTRA Jemaat Efrata Anduonohu
                   </div>
                   <div className="holy_matrimony_content_location_area">
-                    ANDUONOHU
+                    Jl. Srikaya No.5, Anduonohu
                   </div>
                 </div>
                 <LocationOnOutlined sx={{ fontSize: "2.5rem" }} />
@@ -227,6 +231,17 @@ function EventDate({ currentId }) {
             >
               Save Holy Matrimony
             </div>
+            <div
+              data-aos="fade-up"
+              style={{
+                ...styled_component.eventlocation_seemaps,
+              }}
+              onClick={() =>
+                openMapTab("https://goo.gl/maps/ccRHEjfrrCiiAAhw8")
+              }
+            >
+              Lihat Lokasi
+            </div>
           </div>
 
           <div
@@ -243,7 +258,7 @@ function EventDate({ currentId }) {
                 ...styled_component.event_place_title,
               }}
             >
-              Wedding Celebration
+              Wedding Reception
             </div>
             <div
               className="holy_matrimony_content"
@@ -286,7 +301,7 @@ function EventDate({ currentId }) {
                     fontSize: fontSizeContent(),
                   }}
                 >
-                  11 AM
+                  19:00 WITA
                 </div>
                 <AccessAlarmOutlined sx={{ fontSize: "2.5rem" }} />
               </div>
@@ -311,10 +326,10 @@ function EventDate({ currentId }) {
                   }}
                 >
                   <div className="holy_matrimony_content_location_church">
-                    RESTORAN FAJAR
+                    Phinisi Ballroom, Hotel Claro Kendari
                   </div>
                   <div className="holy_matrimony_content_location_area">
-                    Kompleks Pier 29, JL. Jendral A Yani, Kadia, Bende, Kendari
+                    Jl. Edi Sabara No.89, Lahundape, Kendari Barat
                   </div>
                 </div>
                 <LocationOnOutlined sx={{ fontSize: "2.5rem" }} />
@@ -332,7 +347,18 @@ function EventDate({ currentId }) {
                 )
               }
             >
-              Save Wedding Celebration
+              Save Wedding Reception
+            </div>
+            <div
+              data-aos="fade-up"
+              style={{
+                ...styled_component.eventlocation_seemaps,
+              }}
+              onClick={() =>
+                openMapTab("https://goo.gl/maps/i5VgWE4x4ApEmUQn6")
+              }
+            >
+              Lihat Lokasi
             </div>
           </div>
         </div>
@@ -379,6 +405,15 @@ const styled_component = {
     padding: "0.5rem 0rem",
     boxShadow: "3px 3px 10px 0px rgba(0,0,0,0.4)",
     cursor: "pointer",
+  },
+  eventlocation_seemaps: {
+    backgroundColor: "#a3ddcc",
+    borderRadius: "15px",
+    textAlign: "center",
+    cursor: "pointer",
+    padding: "0.5rem 0rem",
+    color: "white",
+    marginTop: "2rem",
   },
 };
 

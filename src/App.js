@@ -11,8 +11,6 @@ import MainPage from "./Components/MainPage";
 import OpeningWord from "./Components/OpeningWord";
 import GroomBride from "./Components/GroomBride";
 import EventDate from "./Components/EventDate";
-import EventLocation from "./Components/EventLocation";
-import OurGallery from "./Components/OurGalley";
 import LiveStreaming from "./Components/LiveStreaming";
 import WeddingGift from "./Components/WeddingGift";
 import Wishes from "./Components/Wishes";
@@ -193,8 +191,6 @@ function App() {
             <OpeningWord />
             <GroomBride currentId={id} />
             <EventDate currentId={id} />
-            <EventLocation />
-            <OurGallery currentId={id} />
             <LiveStreaming />
             <WeddingGift />
             <Wishes currentId={id} guestName={guestName} />

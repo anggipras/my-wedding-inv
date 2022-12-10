@@ -112,14 +112,14 @@ function WeddingGiftModal(props) {
           alignItems: "center",
         }}
       >
-        <div
+        {/* <div
           className="fontFam-quicksand"
           style={{
             fontSize: MediaQuery().isMobile ? "0.8rem" : "1rem",
           }}
         >
           Happiness for the bride and groom by giving a little gift
-        </div>
+        </div> */}
         <Accordion
           style={{ padding: "1rem 2rem", width: "100%" }}
           defaultActiveKey="-1"
@@ -196,8 +196,7 @@ function WeddingGift() {
             textAlign: "center",
           }}
         >
-          However, if you would like to give us a gift we provide a digital
-          envelope to make it easier for you.
+          We would prefer monetary gifts to help us get started. You can send gifts to the following :
         </div>
 
         <div
