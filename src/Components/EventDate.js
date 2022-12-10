@@ -249,7 +249,7 @@ function EventDate({ currentId }) {
             style={{
               padding: paddingPlaceLayout(),
               width: "100%",
-              marginTop: MediaQuery().isMobile ? "2rem" : "0rem",
+              marginTop: MediaQuery().isMobile ? "4rem" : "0rem",
             }}
           >
             <div
@@ -378,6 +378,7 @@ const styled_component = {
     textAlign: "center",
     color: "white",
     fontSize: "1.3rem",
+    padding: "1rem 0"
   },
   holy_matrimony_content: {
     display: "flex",

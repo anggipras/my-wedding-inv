@@ -46,7 +46,7 @@ function GroomBride({ currentId }) {
               apt. Bernardus Anggi Prastianto, S.Farm
             </div>
             <div data-aos="fade-zoom-in" className="groom-parents">
-              1st Son of Bapak Petrus Hariyadi <br /> & Ibu Irene Suryati
+              Putra Sulung Bapak Petrus Hariyadi <br /> & Ibu Irene Suryati
             </div>
             <div style={{ cursor: "pointer" }} onClick={() => goToIG("groom")}>
               <Instagram sx={{ fontSize: "1.5rem" }} />
@@ -67,7 +67,7 @@ function GroomBride({ currentId }) {
               Golda Lande, SH, MH
             </div>
             <div data-aos="fade-zoom-in" className="bride-parents">
-              1st Daughter of Bapak Yunus Lande <br /> & Ibu Rosalina Sallata
+              Putri Sulung Bapak Yunus Lande <br /> & Ibu Rosalina Sallata
             </div>
             <div style={{ cursor: "pointer" }} onClick={() => goToIG("bride")}>
               <Instagram sx={{ fontSize: "1.5rem" }} />

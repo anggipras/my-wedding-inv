@@ -29,7 +29,7 @@ import { useMediaQuery } from "react-responsive";
 
 function App() {
   const [id, setId] = useState(null);
-  const [percentage, setPercentage] = useState(0);
+  // const [percentage, setPercentage] = useState(0);
   const [readyPage, setReadyPage] = useState(false);
   const [showHeader, setShowHeader] = useState(false);
   const [playAudio, setPlayAudio] = useState(true);
@@ -42,21 +42,21 @@ function App() {
 
   useEffect(() => {
     AoS();
-    setTimeout(() => {
-      setPercentage(20);
-    }, 500);
-    setTimeout(() => {
-      setPercentage(50);
-    }, 1000);
-    setTimeout(() => {
-      setPercentage(70);
-    }, 1500);
-    setTimeout(() => {
-      setPercentage(100);
-    }, 2500);
+    // setTimeout(() => {
+    //   setPercentage(20);
+    // }, 500);
+    // setTimeout(() => {
+    //   setPercentage(50);
+    // }, 1000);
+    // setTimeout(() => {
+    //   setPercentage(70);
+    // }, 1500);
+    // setTimeout(() => {
+    //   setPercentage(100);
+    // }, 2500);
     setTimeout(() => {
       setReadyPage(true);
-    }, 3000);
+    }, 100);
     const toGuest = new URLSearchParams(window.location.search).get("to");
     setGuestName(toGuest);
     document.addEventListener("scroll", onScrollHeader);
@@ -237,7 +237,7 @@ function App() {
             height: "100vh",
           }}
         >
-          <div style={{ width: "10rem", height: "10rem" }}>
+          {/* <div style={{ width: "10rem", height: "10rem" }}>
             <CircularProgressbar
               value={percentage}
               maxValue={100}
@@ -255,7 +255,7 @@ function App() {
                 backgroundColor: "#3e98c7",
               })}
             />
-          </div>
+          </div> */}
         </div>
       )}
     </>
