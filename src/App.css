@@ -316,9 +316,16 @@ body {
   animation: zoom-in-zoom-out-ls 2.2s ease infinite;
 }
 
-.liveStreaming-gb {
-  font-family: "Marck Script", serif;
-  font-size: 2rem;
+.liveStreaming-title {
+  font-family: "Charlotte-Southern", serif;
+}
+
+.livestreaming-date {
+  font-family: "Quicksand", serif;
+}
+.lifemoment-text {
+  font-family: "Quicksand", serif;
+  font-size: 0.8rem;
   text-align: center;
 }
 /* Live Streaming End */

@@ -39,7 +39,7 @@ function Header(props) {
             <div className="iconBg">
               <FontAwesomeIcon className="iconFA" icon={faHeart} />
             </div>
-            Mempelai
+            Couple
           </Col>
           <Col
             className="colCenter"

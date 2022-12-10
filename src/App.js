@@ -12,6 +12,7 @@ import OpeningWord from "./Components/OpeningWord";
 import GroomBride from "./Components/GroomBride";
 import EventDate from "./Components/EventDate";
 import LiveStreaming from "./Components/LiveStreaming";
+import LifeMoment from "./Components/LifeMoment";
 import WeddingGift from "./Components/WeddingGift";
 import Wishes from "./Components/Wishes";
 
@@ -192,6 +193,7 @@ function App() {
             <GroomBride currentId={id} />
             <EventDate currentId={id} />
             <LiveStreaming />
+            <LifeMoment />
             <WeddingGift />
             <Wishes currentId={id} guestName={guestName} />
             <audio id="weddingAudio" loop>

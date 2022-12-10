@@ -31,10 +31,10 @@ function LiveStreaming() {
           padding: "2rem 0rem",
         }}
       >
-        <div className="eventlocation_title" style={{ fontSize: "2rem" }}>
-          LIVE STREAMING
+        <div className="liveStreaming-title mb-3" style={{ fontSize: "4rem" }}>
+          Live Streaming
         </div>
-        <span
+        {/* <span
           style={{
             display: "flex",
             justifyContent: "center",
@@ -48,10 +48,11 @@ function LiveStreaming() {
             src={require("../Assets/titledivider.png")}
             alt=""
           />
-        </span>
+        </span> */}
 
-        <div className="liveStreaming-gb mt-2 mb-2">Anggi & Golda</div>
-        <div>Saturday, 4th March 2023 / 09:00 WIB</div>
+        <div className="livestreaming-date mb-3">
+          Sabtu, 4 Maret 2023 / 11:00 WITA
+        </div>
 
         <div
           style={{
@@ -61,11 +62,11 @@ function LiveStreaming() {
             alignItems: "center",
           }}
         >
-          <div onClick={() => openYoutube()}>
+          {/* <div onClick={() => openYoutube()}>
             <YouTube
               sx={{ fontSize: "7rem", color: "#a3ddcc", cursor: "pointer" }}
             />
-          </div>
+          </div> */}
           <div
             style={{
               display: "flex",

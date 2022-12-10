@@ -143,7 +143,7 @@ function EventDate({ currentId }) {
                 ...styled_component.event_place_title,
               }}
             >
-              Holy Matrimony
+              Pemberkatan
             </div>
             <div
               className="holy_matrimony_content"
@@ -166,7 +166,7 @@ function EventDate({ currentId }) {
                     fontSize: fontSizeContent(),
                   }}
                 >
-                  Saturday, March 4th 2023
+                  Sabtu, 4 Maret 2023
                 </div>
                 <CalendarMonthOutlined sx={{ fontSize: "2.5rem" }} />
               </div>
@@ -205,10 +205,12 @@ function EventDate({ currentId }) {
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "flex-end",
+                    textAlign: "end",
                   }}
                 >
                   <div className="holy_matrimony_content_location_church">
-                    Gedung GEPSULTRA Jemaat Efrata Anduonohu
+                    Gedung GEPSULTRA <br />
+                    Jemaat Efrata Anduonohu
                   </div>
                   <div className="holy_matrimony_content_location_area">
                     Jl. Srikaya No.5, Anduonohu
@@ -225,11 +227,11 @@ function EventDate({ currentId }) {
               }}
               onClick={() =>
                 remindInCalendar(
-                  "https://calendar.google.com/calendar/u/0/r/eventedit?text=Anggi+%26+Golda+Holy+Matrimony&dates=20230304T090000/20230304T110000&ctz=Asia/Makassar&details&location=https://goo.gl/maps/ccRHEjfrrCiiAAhw8&pli=1&uid=1521339627addtocalendar&sf=true&output=xml"
+                  "https://calendar.google.com/calendar/u/0/r/eventedit?text=Anggi+%26+Golda+Pemberkatan&dates=20230304T110000/20230304T130000&ctz=Asia/Makassar&details&location=https://goo.gl/maps/ccRHEjfrrCiiAAhw8&pli=1&uid=1521339627addtocalendar&sf=true&output=xml"
                 )
               }
             >
-              Save Holy Matrimony
+              Save The Date
             </div>
             <div
               data-aos="fade-up"
@@ -258,7 +260,7 @@ function EventDate({ currentId }) {
                 ...styled_component.event_place_title,
               }}
             >
-              Wedding Reception
+              Resepsi
             </div>
             <div
               className="holy_matrimony_content"
@@ -282,7 +284,7 @@ function EventDate({ currentId }) {
                     fontSize: fontSizeContent(),
                   }}
                 >
-                  Saturday, March 4th 2023
+                  Sabtu, 4 Maret 2023
                 </div>
                 <CalendarMonthOutlined sx={{ fontSize: "2.5rem" }} />
               </div>
@@ -323,10 +325,11 @@ function EventDate({ currentId }) {
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "flex-start",
+                    textAlign: "start",
                   }}
                 >
                   <div className="holy_matrimony_content_location_church">
-                    Phinisi Ballroom, Hotel Claro Kendari
+                    Phinisi Ballroom Hotel Claro
                   </div>
                   <div className="holy_matrimony_content_location_area">
                     Jl. Edi Sabara No.89, Lahundape, Kendari Barat
@@ -343,11 +346,11 @@ function EventDate({ currentId }) {
               }}
               onClick={() =>
                 remindInCalendar(
-                  "https://calendar.google.com/calendar/u/0/r/eventedit?text=Anggi+%26+Golda+Wedding+Celebration&dates=20230304T110000/20230304T130000&ctz=Asia/Makassar&details&location=https://goo.gl/maps/Ho95S7aRfvaEP3kDA&pli=1&uid=1521339627addtocalendar&sf=true&output=xml"
+                  "https://calendar.google.com/calendar/u/0/r/eventedit?text=Anggi+%26+Golda+Resepsi&dates=20230304T190000/20230304T220000&ctz=Asia/Makassar&details&location=https://goo.gl/maps/i5VgWE4x4ApEmUQn6&pli=1&uid=1521339627addtocalendar&sf=true&output=xml"
                 )
               }
             >
-              Save Wedding Reception
+              Save The Date
             </div>
             <div
               data-aos="fade-up"
@@ -378,7 +381,7 @@ const styled_component = {
     textAlign: "center",
     color: "white",
     fontSize: "1.3rem",
-    padding: "1rem 0"
+    padding: "1rem 0",
   },
   holy_matrimony_content: {
     display: "flex",
