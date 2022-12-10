@@ -84,7 +84,7 @@ function Wishes({ currentId, guestName }) {
   const getWishesData = () => {
     axios
       .get(
-        `https://anggi-golda-wedding-api.herokuapp.com/api/weddingwish?page=${currentPage}`
+        `https://anggi-golda-wedding-api.onrender.com/api/weddingwish?page=${currentPage}`
       )
       .then((res) => {
         const { totalPages, totalItems, wishesData } = res.data;
@@ -126,7 +126,7 @@ function Wishes({ currentId, guestName }) {
     setLoadingModal(true);
     axios
       .post(
-        "https://anggi-golda-wedding-api.herokuapp.com/api/weddingwish",
+        "https://anggi-golda-wedding-api.onrender.com/api/weddingwish",
         wishesData
       )
       .then(() => {
