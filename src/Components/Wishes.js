@@ -68,10 +68,6 @@ function Wishes({ currentId, guestName }) {
   const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
-    console.log('ajib', guestName);
-  }, []);
-
-  useEffect(() => {
     getWishesData();
   }, [currentPage]);
 
