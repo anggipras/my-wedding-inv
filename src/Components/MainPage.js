@@ -9,7 +9,6 @@ import { ClickHeader } from "../Util/HeaderMethod";
 
 function MainPage({ currentId, vidCond }) {
   useEffect(() => {
-    // window.onload = function () {};
     if (vidCond) {
       document.getElementById("mainvideo").play();
     }
@@ -22,7 +21,7 @@ function MainPage({ currentId, vidCond }) {
   }, [currentId]);
 
   return (
-    <div id="home">
+    <div className="mainPage" id="home">
       <div
         style={{
           width: "100vw",

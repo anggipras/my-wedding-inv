@@ -24,6 +24,16 @@ body {
   color: white;
 }
 
+.mainLayout {
+  overflow: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+.mainPage {
+  overflow: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
 /* Opening Invitation Start */
 .groombride-name {
   font-family: "Charlotte-Southern", serif;

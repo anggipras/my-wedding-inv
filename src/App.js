@@ -182,7 +182,7 @@ function App() {
               </button>
             </div>
           </div>
-          <div>
+          <div className="mainLayout">
             {!isScrolling ? (
               <Header showHeader={showHeader} setId={setId} />
             ) : (
