@@ -153,12 +153,11 @@ function WeddingGift() {
     <div
       style={{
         display: "flex",
+        position: "relative",
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
         padding: "1rem",
-        backgroundImage: `url(${require("../Assets/greenpastel2.jpg")})`,
-        backgroundSize: "100% 100%",
       }}
     >
       <div
@@ -167,9 +166,13 @@ function WeddingGift() {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
+          backgroundColor: "rgba(232, 244, 234, 0.8)",
+          boxShadow: "rgb(0 0 0 / 50%) 0px 2px 8px",
+          borderRadius: "2rem",
+          padding: "2rem 0",
         }}
       >
-        <CardGiftcard sx={{ fontSize: "5rem", color: "#a3ddcc" }} />
+        <CardGiftcard sx={{ fontSize: "5rem", color: "black" }} />
         <div className="eventlocation_title" style={{ fontSize: "2rem" }}>
           WEDDING GIFT
         </div>
@@ -196,7 +199,9 @@ function WeddingGift() {
             textAlign: "center",
           }}
         >
-          We would prefer monetary gifts to help us get started. You can send gifts to the following :
+          Your presence is more important to us than anything. However, if you
+          would like to give us a gift we provide digital envelopes to make it
+          easier for you.
         </div>
 
         <div
@@ -207,7 +212,7 @@ function WeddingGift() {
             alignItems: "center",
             textAlign: "center",
             backgroundColor: "#a3ddcc",
-            color: "white",
+            color: "black",
             borderRadius: "2rem",
             padding: "1rem 5rem",
             cursor: "pointer",

@@ -210,13 +210,14 @@ function Wishes({ currentId, guestName }) {
   };
 
   return (
-    <div style={{ marginBottom: "6rem" }}>
+    <>
       <div
         id="wishes"
         style={{
           borderRadius: "1rem",
+          position: "relative",
           margin: MediaQuery().isMobile ? "1rem" : "5rem",
-          backgroundColor: "#a3ddcc",
+          backgroundColor: "rgba(163, 221, 204, 0.7)",
         }}
       >
         <div className="wishes-head-layout p-2">
@@ -329,7 +330,7 @@ function Wishes({ currentId, guestName }) {
         ) : null}
       </div>
       <LoadingModal show={loadingModal} onHide={() => setLoadingModal(false)} />
-    </div>
+    </>
   );
 }
 

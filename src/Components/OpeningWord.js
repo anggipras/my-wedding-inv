@@ -1,16 +1,11 @@
 import "../App.css";
-import TopFlower from "../Assets/topflower.png";
+import AnG from "../Assets/ang.png";
 
 function OpeningWord() {
   return (
     <>
       <div className="OpeningWord-layout">
-        <img
-          data-aos="zoom-in"
-          src={TopFlower}
-          alt=""
-          className="topflower-size"
-        />
+        <img data-aos="zoom-in" src={AnG} alt="" className="AnG-size" />
         <div data-aos="fade-up" className="OpeningWord-size">
           <div className="OpeningTitle">We found love</div>
           <div className="OpeningContent">

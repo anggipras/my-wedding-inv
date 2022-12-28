@@ -1,5 +1,4 @@
 import "../App.css";
-import AnG from "../Assets/ang.png";
 import Groom from "../Assets/anggimain.png";
 import Bride from "../Assets/goldamain.png";
 import MediaQuery from "../Util/MediaQuery";
@@ -28,12 +27,17 @@ function GroomBride({ currentId }) {
       id="groom-bride"
       className="d-flex flex-column justify-content-center align-items-center GroomBride-layout"
     >
-      <img data-aos="fade-up" src={AnG} alt="" className="AnG-size" />
       <div data-aos="fade-up" className="groomandbride-tobe">
-        Groom and Bride <br /> to Be
+        Groom & Bride
       </div>
-      <div className="groomandbride-area">
-        <div className="d-flex flex-column justify-content-between align-items-center groom-layout">
+      <div className="groomandbride-area mt-5">
+        <div
+          className="d-flex flex-column justify-content-between align-items-center groom-layout"
+          style={{
+            marginBottom: MediaQuery().isMobile ? "16px" : "0px",
+            marginRight: MediaQuery().isMobile ? "0px" : "64px",
+          }}
+        >
           <img
             data-aos={MediaQuery().isMobile ? "zoom-in" : "fade-right"}
             data-aos-offset="200"
@@ -53,7 +57,6 @@ function GroomBride({ currentId }) {
             </div>
           </div>
         </div>
-        <div className="name-divider">and</div>
         <div className="d-flex flex-column justify-content-start align-items-center bride-layout">
           <img
             data-aos={MediaQuery().isMobile ? "zoom-in" : "fade-left"}

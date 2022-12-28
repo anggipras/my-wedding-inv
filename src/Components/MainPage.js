@@ -3,7 +3,7 @@ import { Carousel } from "react-bootstrap";
 import FirstPhoto from "../Assets/photo1.jpg";
 import SecondPhoto from "../Assets/photo2.jpg";
 import ThirdPhoto from "../Assets/photo3.jpg";
-import MainVideo from "../Assets/main_video.mp4";
+import MainVideo from "../Assets/anggi_golda.mp4";
 import { useEffect } from "react";
 import { ClickHeader } from "../Util/HeaderMethod";
 
@@ -21,15 +21,8 @@ function MainPage({ currentId, vidCond }) {
   }, [currentId]);
 
   return (
-    <div className="mainPage" id="home">
-      <div
-        style={{
-          width: "100vw",
-          height: "1px",
-          backgroundColor: "white",
-        }}
-      />
-      <video id="mainvideo" width="100%" muted loop>
+    <div id="home">
+      <video id="mainvideo" muted playsInline loop>
         <source src={MainVideo} type="video/mp4" />
       </video>
       {/* <Carousel

@@ -9,11 +9,13 @@ import "slick-carousel/slick/slick-theme.css";
 import Header from "./Components/Header";
 import MainPage from "./Components/MainPage";
 import OpeningWord from "./Components/OpeningWord";
+import SecondVideoComp from "./Components/SecondVideo";
 import GroomBride from "./Components/GroomBride";
 import EventDate from "./Components/EventDate";
 import LiveStreaming from "./Components/LiveStreaming";
 import LifeMoment from "./Components/LifeMoment";
 import WeddingGift from "./Components/WeddingGift";
+import ThirdVideoComp from "./Components/ThirdVideo";
 import Wishes from "./Components/Wishes";
 
 //library
@@ -143,7 +145,7 @@ function App() {
                 src={MainPhotoDesktop}
                 style={{
                   position: "absolute",
-                  top: 0,
+                  top: -150,
                   left: 0,
                   width: "100%",
                   zIndex: -10,
@@ -188,14 +190,41 @@ function App() {
             ) : (
               <></>
             )}
-            <MainPage currentId={id} vidCond={playVideo} />
+            {/* <MainPage currentId={id} vidCond={playVideo} /> */}
             <OpeningWord />
+            <SecondVideoComp />
             <GroomBride currentId={id} />
             <EventDate currentId={id} />
             <LiveStreaming />
             <LifeMoment />
-            <WeddingGift />
-            <Wishes currentId={id} guestName={guestName} />
+            <div className="bg-wishes-and-gift">
+              <div class="custom-shape-divider-wishesgift-top">
+                <svg
+                  data-name="Layer 1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 2600 131.1"
+                  preserveAspectRatio="none"
+                >
+                  <path
+                    class="shape-fill"
+                    d="M0 0L2600 0 2600 69.1 0 0z"
+                  ></path>
+                  <path
+                    class="shape-fill"
+                    opacity=".5"
+                    d="M0 0L2600 0 2600 69.1 0 69.1z"
+                  ></path>
+                  <path
+                    class="shape-fill"
+                    opacity=".25"
+                    d="M2600 0L0 0 0 130.1 2600 69.1z"
+                  ></path>
+                </svg>{" "}
+              </div>
+              <WeddingGift />
+              <Wishes currentId={id} guestName={guestName} />
+            </div>
+            <ThirdVideoComp />
             <audio id="weddingAudio" loop>
               <source src={WeddingSong} type="audio/mpeg" />
             </audio>
