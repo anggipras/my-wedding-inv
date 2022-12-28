@@ -8,6 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 //component
 import Header from "./Components/Header";
 import MainPage from "./Components/MainPage";
+import HeaderSticky from "./Components/HeaderSticky";
 import OpeningWord from "./Components/OpeningWord";
 import SecondVideoComp from "./Components/SecondVideo";
 import GroomBride from "./Components/GroomBride";
@@ -191,6 +192,7 @@ function App() {
               <></>
             )}
             {/* <MainPage currentId={id} vidCond={playVideo} /> */}
+            <HeaderSticky />
             <OpeningWord />
             <SecondVideoComp vidCond={playVideo} />
             <GroomBride currentId={id} />
@@ -242,6 +244,7 @@ function App() {
                     right: 0,
                     marginRight: "1rem",
                     cursor: "pointer",
+                    zIndex: "30"
                   }}
                 />
               ) : (
@@ -255,6 +258,7 @@ function App() {
                     right: 0,
                     marginRight: "1rem",
                     cursor: "pointer",
+                    zIndex: "30"
                   }}
                 />
               )}

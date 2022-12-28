@@ -24,6 +24,39 @@ body {
   color: white;
 }
 
+.header-sticky {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: .1rem;
+  background-color: rgb(184, 216, 190, 0.8);
+  color: black;
+  z-index: 20;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 20;
+}
+
+.hideHeader {
+  display: none;
+}
+
+.header-sticky-title {
+  font-family: "Rochester", serif;
+  font-size: 1rem;
+}
+
+.header-sticky-content {
+  font-family: "Charlotte-Southern", serif;
+  font-size: 1rem;
+}
+
 #home {
   background: #fff;
   height: auto;
