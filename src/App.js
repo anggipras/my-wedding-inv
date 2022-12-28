@@ -163,7 +163,7 @@ function App() {
                 paddingBottom: "7rem",
               }}
             >
-              <div className="groombride-name mb-5">Anggi & Golda</div>
+              <div className="groombride-name">Anggi & Golda</div>
               <div className="fontFam-quicksand fontBold whiteColor my-2">
                 Kepada Bapak/Ibu/Saudara/i
               </div>
