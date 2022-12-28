@@ -6,7 +6,7 @@ import {
   faCommentDots,
   faHeart,
   faHouseUser,
-  faImages,
+  faGift
 } from "@fortawesome/free-solid-svg-icons";
 
 function Header(props) {
@@ -25,7 +25,7 @@ function Header(props) {
         <Row className="mt-1 mb-1" style={{ width: "100%" }}>
           <Col
             className="colCenter"
-            onClick={() => onClickHeader({ evt: "home" })}
+            onClick={() => onClickHeader({ evt: "opening-word" })}
           >
             <div className="iconBg">
               <FontAwesomeIcon className="iconFA" icon={faHouseUser} />
@@ -50,15 +50,15 @@ function Header(props) {
             </div>
             Event
           </Col>
-          {/* <Col
+          <Col
             className="colCenter"
-            onClick={() => onClickHeader({ evt: "gallery" })}
+            onClick={() => onClickHeader({ evt: "gift" })}
           >
             <div className="iconBg">
-              <FontAwesomeIcon className="iconFA" icon={faImages} />
+              <FontAwesomeIcon className="iconFA" icon={faGift} />
             </div>
-            Gallery
-          </Col> */}
+            Gift
+          </Col>
           <Col
             className="colCenter"
             onClick={() => onClickHeader({ evt: "wishes" })}

@@ -193,7 +193,7 @@ function App() {
             )}
             {/* <MainPage currentId={id} vidCond={playVideo} /> */}
             <HeaderSticky />
-            <OpeningWord />
+            <OpeningWord currentId={id} />
             <SecondVideoComp vidCond={playVideo} />
             <GroomBride currentId={id} />
             <EventDate currentId={id} />
@@ -223,7 +223,7 @@ function App() {
                   ></path>
                 </svg>{" "}
               </div>
-              <WeddingGift />
+              <WeddingGift currentId={id} />
               <Wishes currentId={id} guestName={guestName} />
             </div>
             <div>

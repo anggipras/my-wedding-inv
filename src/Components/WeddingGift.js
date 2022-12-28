@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../App.css";
 import MediaQuery from "../Util/MediaQuery";
 import Modal from "react-bootstrap/Modal";
 import Accordion from "react-bootstrap/Accordion";
 import { useAccordionButton } from "react-bootstrap/AccordionButton";
 import { Add, ContentCopy, CardGiftcard } from "@mui/icons-material";
+import { ClickHeader } from "../Util/HeaderMethod";
 
 function CustomToggle({ children, eventKey, setCopy }) {
   const decoratedOnClick = useAccordionButton(eventKey, () => setCopy());
@@ -146,8 +147,14 @@ function WeddingGiftModal(props) {
   );
 }
 
-function WeddingGift() {
+function WeddingGift({ currentId }) {
   const [modalShow, setModalShow] = useState(false);
+
+  useEffect(() => {
+    if (currentId != null) {
+      ClickHeader(currentId.evt);
+    }
+  }, [currentId]);
 
   return (
     <div
@@ -159,6 +166,7 @@ function WeddingGift() {
         alignItems: "center",
         padding: "1rem",
       }}
+      id="gift"
     >
       <div
         style={{

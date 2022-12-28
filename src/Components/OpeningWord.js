@@ -1,10 +1,18 @@
+import { useEffect } from "react";
 import "../App.css";
 import AnG from "../Assets/ang.png";
+import { ClickHeader } from "../Util/HeaderMethod";
 
-function OpeningWord() {
+function OpeningWord({ currentId }) {
+  useEffect(() => {
+    if (currentId != null) {
+      ClickHeader(currentId.evt);
+    }
+  }, [currentId]);
+
   return (
     <>
-      <div className="OpeningWord-layout">
+      <div id="opening-word" className="OpeningWord-layout">
         <img data-aos="zoom-in" src={AnG} alt="" className="AnG-size" />
         <div data-aos="fade-up" className="OpeningWord-size">
           <div className="OpeningTitle">We found love</div>
