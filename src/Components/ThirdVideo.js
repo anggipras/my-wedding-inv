@@ -2,10 +2,12 @@ import "../App.css";
 import ThirdVideo from "../Assets/anggi_golda.mp4";
 import { useEffect } from "react";
 
-function ThirdVideoComp() {
+function ThirdVideoComp({ vidCond }) {
   useEffect(() => {
-    document.getElementById("myThirdvideo").play();
-  }, []);
+    if (vidCond) {
+        document.getElementById("myThirdvideo").play();
+    }
+  }, [vidCond]);
 
   return (
     <div id="thirdVideo">
