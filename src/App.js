@@ -198,6 +198,9 @@ function App() {
             )}
             {/* <MainPage currentId={id} vidCond={playVideo} /> */}
             <HeaderSticky />
+            <div>
+              <ThirdVideoComp vidCond={playVideo} />
+            </div>
             <OpeningWord currentId={id} />
             <GroomBride currentId={id} vidCond={playVideo} />
             <EventDate currentId={id} />
@@ -229,9 +232,6 @@ function App() {
               </div>
               <WeddingGift currentId={id} />
               <Wishes currentId={id} guestName={guestName} />
-            </div>
-            <div>
-              <ThirdVideoComp vidCond={playVideo} />
             </div>
             <audio id="weddingAudio" loop>
               <source src={WeddingSong} type="audio/mpeg" />

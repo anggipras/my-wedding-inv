@@ -207,9 +207,8 @@ function WeddingGift({ currentId }) {
             textAlign: "center",
           }}
         >
-          Your presence is more important to us than anything. However, if you
-          would like to give us a gift we provide digital envelopes to make it
-          easier for you.
+          Your presence & prayers mean a lot for us. However, if you would like
+          to bless us with a gift, we provide digital envelopes.
         </div>
 
         <div

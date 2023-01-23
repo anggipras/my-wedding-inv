@@ -52,7 +52,7 @@ function GroomBride({ currentId, vidCond }) {
               <hr className="name-divider" />
               <div className="groom-fullname">Bernardus Anggi Prastianto</div>
               <div className="groom-parents">
-                Son Of <br /> Mr. Petrus Hariyadi <br /> & <br /> Mrs. Irene
+                Son of <br /> Mr. Petrus Hariyadi <br /> & <br /> Mrs. Irene
                 Suryati
               </div>
               <div
