@@ -581,7 +581,7 @@ body {
   height: 100%;
   background-image: url("./Assets/bg_1.jpg");
   background-size: cover;
-  background-position: center;
+  background-position-x: 45%;
   filter: brightness(60%);
 }
 
