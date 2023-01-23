@@ -138,7 +138,7 @@ function WeddingGiftModal(props) {
               FOR THE BRIDE
             </CustomToggle>
             <Accordion.Collapse eventKey="1">
-              {giftContent("Golda Lande", "BCA Digital", "008251607333")}
+              {giftContent("Golda Lande", "BRI", "041001020718503")}
             </Accordion.Collapse>
           </div>
         </Accordion>
