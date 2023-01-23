@@ -161,10 +161,11 @@ function Wishes({ currentId, guestName }) {
                   {item.person_name}
                 </div>
                 <div
-                  className="d-flex justify-content-start align-items-center"
+                  className="justify-content-start align-items-center"
                   style={{
+                    display: item.attendance ? "flex" : "none",
                     backgroundColor: "black",
-                    padding: "0.25rem",
+                    padding: "0 0.4rem",
                     borderRadius: "0.3rem",
                   }}
                 >
@@ -172,15 +173,14 @@ function Wishes({ currentId, guestName }) {
                     sx={{
                       fontSize: "0.7rem",
                       color: "white",
-                      marginRight: "0.3rem",
                     }}
                   />
-                  <div
+                  {/* <div
                     className="wishes-attendace fontFam-quicksand"
                     style={{ fontSize: "0.7rem", color: "white" }}
                   >
                     {item.attendance ? "Hadir" : "Tidak Hadir"}
-                  </div>
+                  </div> */}
                 </div>
               </div>
 

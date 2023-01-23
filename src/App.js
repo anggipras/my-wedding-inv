@@ -10,7 +10,6 @@ import Header from "./Components/Header";
 import MainPage from "./Components/MainPage";
 import HeaderSticky from "./Components/HeaderSticky";
 import OpeningWord from "./Components/OpeningWord";
-import SecondVideoComp from "./Components/SecondVideo";
 import GroomBride from "./Components/GroomBride";
 import EventDate from "./Components/EventDate";
 import LiveStreaming from "./Components/LiveStreaming";
@@ -23,7 +22,7 @@ import Wishes from "./Components/Wishes";
 import { useEffect, useState } from "react";
 import { AoS } from "./Util/Aos";
 import { buildStyles, CircularProgressbar } from "react-circular-progressbar";
-import { PlayCircle, PauseCircle } from "@mui/icons-material";
+import { PlayCircle, PauseCircle, Drafts } from "@mui/icons-material";
 
 //assets
 import WeddingSong from "./Assets/onelife.mp3";
@@ -161,28 +160,34 @@ function App() {
                 flexDirection: "column",
                 justifyContent: "flex-end",
                 alignItems: "center",
-                paddingBottom: "7rem",
+                paddingBottom: "5rem",
               }}
             >
               <div className="groombride-name">Anggi & Golda</div>
-              <div className="fontFam-quicksand fontBold whiteColor my-2">
-                Kepada Bapak/Ibu/Saudara/i
+              <div
+                className="fontFam-quicksand fontBold whiteColor"
+                style={{ fontSize: "12px" }}
+              >
+                Dear,
               </div>
               <div
-                className="fontFam-quicksand fontBold whiteColor my-2"
-                style={{ fontSize: "1.5rem" }}
+                className="fontFam-quicksand fontBold whiteColor"
+                style={{ fontSize: "18px" }}
               >
                 {guestName}
               </div>
               <div
                 className="fontFam-quicksand whiteColor my-2"
-                style={{ textAlign: "center" }}
+                style={{ textAlign: "center", fontSize: "10px" }}
               >
-                Mohon maaf bila ada kesalahan pada penulisan nama/gelar
+                We apologize for any misspelled name/title
               </div>
-              <button className="open-inv-button" onClick={() => openInv()}>
-                Buka Undangan
-              </button>
+              <div className="open-inv-button" onClick={() => openInv()}>
+                <span style={{ marginRight: "5px" }}>
+                  <Drafts sx={{ fontSize: "1.3rem", color: "black" }} />
+                </span>
+                <div>Open Invitation</div>
+              </div>
             </div>
           </div>
           <div className="mainLayout">
@@ -194,8 +199,7 @@ function App() {
             {/* <MainPage currentId={id} vidCond={playVideo} /> */}
             <HeaderSticky />
             <OpeningWord currentId={id} />
-            <SecondVideoComp vidCond={playVideo} />
-            <GroomBride currentId={id} />
+            <GroomBride currentId={id} vidCond={playVideo} />
             <EventDate currentId={id} />
             <LiveStreaming />
             <LifeMoment />
@@ -244,7 +248,7 @@ function App() {
                     right: 0,
                     marginRight: "1rem",
                     cursor: "pointer",
-                    zIndex: "30"
+                    zIndex: "30",
                   }}
                 />
               ) : (
@@ -258,7 +262,7 @@ function App() {
                     right: 0,
                     marginRight: "1rem",
                     cursor: "pointer",
-                    zIndex: "30"
+                    zIndex: "30",
                   }}
                 />
               )}

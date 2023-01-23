@@ -172,7 +172,7 @@ function EventDate({ currentId }) {
                       ...styled_component.event_place_title,
                     }}
                   >
-                    Pemberkatan
+                    Holy Matrimony
                   </div>
                   <div
                     className="holy_matrimony_content"
@@ -195,7 +195,7 @@ function EventDate({ currentId }) {
                           fontSize: fontSizeContent(),
                         }}
                       >
-                        Sabtu, 4 Maret 2023
+                        Saturday, March 4th 2023
                       </div>
                       <CalendarMonthOutlined sx={{ fontSize: "2.5rem" }} />
                     </div>
@@ -271,7 +271,7 @@ function EventDate({ currentId }) {
                       openMapTab("https://goo.gl/maps/ccRHEjfrrCiiAAhw8")
                     }
                   >
-                    Lihat Lokasi
+                    See Location
                   </div>
                 </div>
               </div>
@@ -289,7 +289,7 @@ function EventDate({ currentId }) {
                       ...styled_component.event_place_title,
                     }}
                   >
-                    Resepsi
+                    Reception
                   </div>
                   <div
                     className="holy_matrimony_content"
@@ -313,7 +313,7 @@ function EventDate({ currentId }) {
                           fontSize: fontSizeContent(),
                         }}
                       >
-                        Sabtu, 4 Maret 2023
+                        Saturday, March 4th 2023
                       </div>
                       <CalendarMonthOutlined sx={{ fontSize: "2.5rem" }} />
                     </div>
@@ -390,7 +390,7 @@ function EventDate({ currentId }) {
                       openMapTab("https://goo.gl/maps/i5VgWE4x4ApEmUQn6")
                     }
                   >
-                    Lihat Lokasi
+                    See Location
                   </div>
                 </div>
               </div>

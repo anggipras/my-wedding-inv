@@ -34,24 +34,9 @@ function LiveStreaming() {
         <div className="liveStreaming-title mb-3" style={{ fontSize: "4rem" }}>
           Live Streaming
         </div>
-        {/* <span
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            width: "17rem",
-            marginBottom: "1rem",
-          }}
-        >
-          <img
-            width="100%"
-            src={require("../Assets/titledivider.png")}
-            alt=""
-          />
-        </span> */}
 
         <div className="livestreaming-date mb-3">
-          Sabtu, 4 Maret 2023 / 11:00 WITA
+          Saturday, March 4th 2023 / 11:00 WITA
         </div>
 
         <div
@@ -62,11 +47,6 @@ function LiveStreaming() {
             alignItems: "center",
           }}
         >
-          {/* <div onClick={() => openYoutube()}>
-            <YouTube
-              sx={{ fontSize: "7rem", color: "#a3ddcc", cursor: "pointer" }}
-            />
-          </div> */}
           <div
             style={{
               display: "flex",

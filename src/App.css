@@ -8,6 +8,16 @@
   src: url(./Assets/fonts/Charlotte-Southern.otf);
 }
 
+@font-face {
+  font-family: "Saritha";
+  src: url(./Assets/fonts/Saritha.ttf);
+}
+
+@font-face {
+  font-family: "PlayFair";
+  src: url(./Assets/fonts/PlayfairDisplay-Regular.ttf);
+}
+
 body {
   overflow-x: hidden;
 }
@@ -30,7 +40,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: .1rem;
+  padding: 0.1rem;
   background-color: rgb(184, 216, 190, 0.8);
   color: black;
   z-index: 20;
@@ -72,7 +82,7 @@ body {
   background: #fff;
   height: auto;
   transition: all 0.3s ease;
-  padding: 1rem 2rem;
+  width: 50%;
 }
 
 #mySecondvideo {
@@ -97,18 +107,21 @@ body {
 
 /* Opening Invitation Start */
 .groombride-name {
-  font-family: "Charlotte-Southern", serif;
-  font-size: 5rem;
+  font-family: "Saritha", serif;
+  font-size: 40px;
   color: white;
-  margin-bottom: 30%;
+  margin-bottom: 10%;
 }
 
 .open-inv-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #b8d8be;
-  border-radius: 1rem;
+  border-radius: 0.7rem;
   border: none;
-  padding: 1rem;
-  color: white;
+  padding: 0.5rem 1rem;
+  color: black;
 
   animation: zoom-in-zoom-out-ls 2.2s ease infinite;
 }
@@ -216,14 +229,13 @@ body {
 
 .groomandbride-area {
   display: flex;
-  flex-direction: row;
-}
-
-.groom-layout,
-.bride-layout {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   border-radius: 2rem;
   box-shadow: rgb(0 0 0 / 50%) 0px 2px 8px;
-  padding-bottom: 2rem;
+  padding: 2rem;
+  width: 100%;
 }
 
 .groomphoto-size,
@@ -239,18 +251,31 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: -2rem;
   z-index: 10;
 }
 
-.brideword-area {
-  margin-top: 0rem;
+.groomword-area {
+  margin-right: 2rem;
+}
+
+.groom-fullname,
+.bride-fullname {
+  font-family: "PlayFair", "sans-serif";
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.name-divider {
+  border-top: 1px solid black;
+  opacity: 1 !important;
+  width: 50%;
 }
 
 .groom-name,
 .bride-name {
-  font-family: "Rochester", cursive;
-  font-size: 2.2rem;
+  font-family: "Saritha", "sans-serif";
+  font-size: 61px;
   text-align: center;
   max-width: 20rem;
 }
@@ -258,7 +283,7 @@ body {
 .groom-parents,
 .bride-parents {
   font-family: "Bellefair", serif;
-  font-size: 1rem;
+  font-size: 14px;
   text-align: center;
 }
 
@@ -347,16 +372,19 @@ body {
 .bg-photo-1 {
   position: relative;
   padding: 4rem 1rem 1rem 1rem;
+  width: 100%;
 }
 
 .bg-photo-2 {
   position: relative;
   padding: 1rem;
+  width: 100%;
 }
 
 .bg-photo-3 {
   position: relative;
   padding: 1rem 1rem 5rem 1rem;
+  width: 100%;
 }
 
 .bg-photo-1::before,
@@ -396,7 +424,7 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  /* margin-top: 2rem; */
+  width: 100%;
 }
 
 .eventdate-title {
@@ -429,7 +457,7 @@ body {
   padding: 1rem;
   margin: 0 0.2rem;
   border-radius: 1.5rem;
-  background-color: #a3ddcc;
+  background-color: #b8d8be;
   width: 20%;
 
   font-family: "Bellefair", serif;
@@ -633,6 +661,10 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  #secondVideo {
+    width: 100%;
+  }
+
   .navBar-bg {
     width: calc(100vw - 20px);
     margin-right: 5px;
@@ -681,7 +713,12 @@ body {
 
   /* Groom Bride Start */
   .groomandbride-area {
-    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .groom-layout,
+  .bride-layout {
+    width: 50%;
   }
 
   .groomphoto-size,
@@ -690,8 +727,17 @@ body {
     height: 100%;
   }
 
-  .brideword-area {
-    margin-top: -2rem;
+  .bride-fullname {
+    margin-bottom: 32px;
+  }
+
+  .groom-name,
+  .bride-name {
+    font-size: 3rem;
+  }
+
+  .groomword-area {
+    margin-right: 0;
   }
   /* Groom Bride End */
 

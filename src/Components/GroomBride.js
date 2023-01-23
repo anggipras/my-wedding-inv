@@ -5,13 +5,20 @@ import MediaQuery from "../Util/MediaQuery";
 import { useEffect } from "react";
 import { ClickHeader } from "../Util/HeaderMethod";
 import { Instagram } from "@mui/icons-material";
+import SecondVideo from "../Assets/second_video.mp4";
 
-function GroomBride({ currentId }) {
+function GroomBride({ currentId, vidCond }) {
   useEffect(() => {
     if (currentId != null) {
       ClickHeader(currentId.evt);
     }
   }, [currentId]);
+
+  useEffect(() => {
+    if (vidCond) {
+      document.getElementById("mySecondvideo").play();
+    }
+  }, [vidCond]);
 
   const goToIG = (param) => {
     window.open(
@@ -27,53 +34,52 @@ function GroomBride({ currentId }) {
       id="groom-bride"
       className="d-flex flex-column justify-content-center align-items-center GroomBride-layout"
     >
-      <div data-aos="fade-up" className="groomandbride-tobe">
+      <div className="groomandbride-tobe">
         Groom & Bride
       </div>
-      <div className="groomandbride-area mt-5">
-        <div
-          className="d-flex flex-column justify-content-between align-items-center groom-layout"
-          style={{
-            marginBottom: MediaQuery().isMobile ? "16px" : "0px",
-            marginRight: MediaQuery().isMobile ? "0px" : "64px",
-          }}
-        >
-          <img
-            data-aos={MediaQuery().isMobile ? "zoom-in" : "fade-right"}
-            data-aos-offset="200"
-            src={Groom}
-            alt=""
-            className="groomphoto-size"
-          />
-          <div className="groomword-area">
-            <div data-aos="fade-zoom-in" className="groom-name">
-              apt. Bernardus Anggi Prastianto, S.Farm
-            </div>
-            <div data-aos="fade-zoom-in" className="groom-parents">
-              Putra Keluarga Bapak Petrus Hariyadi <br /> & Ibu Irene Suryati
-            </div>
-            <div style={{ cursor: "pointer" }} onClick={() => goToIG("groom")}>
-              <Instagram sx={{ fontSize: "1.5rem" }} />
+      <div className="groomandbride-area mt-3">
+        <div id="secondVideo">
+          <video id="mySecondvideo" muted playsInline loop>
+            <source src={SecondVideo} type="video/mp4" />
+          </video>
+        </div>
+        <div className="d-flex justify-content-center align-items-center">
+          <div className="d-flex flex-column justify-content-between align-items-center groom-layout">
+            <div className="groomword-area">
+              <div className="groom-name">
+                Anggi
+              </div>
+              <hr className="name-divider" />
+              <div className="groom-fullname">Bernardus Anggi Prastianto</div>
+              <div className="groom-parents">
+                Son Of <br /> Mr. Petrus Hariyadi <br /> & <br /> Mrs. Irene
+                Suryati
+              </div>
+              <div
+                style={{ cursor: "pointer" }}
+                onClick={() => goToIG("groom")}
+              >
+                <Instagram sx={{ fontSize: "1.5rem" }} />
+              </div>
             </div>
           </div>
-        </div>
-        <div className="d-flex flex-column justify-content-start align-items-center bride-layout">
-          <img
-            data-aos={MediaQuery().isMobile ? "zoom-in" : "fade-left"}
-            data-aos-offset="200"
-            src={Bride}
-            alt=""
-            className="bridephoto-size"
-          />
-          <div className="brideword-area">
-            <div data-aos="fade-zoom-in" className="bride-name">
-              Golda Lande, SH, MH
-            </div>
-            <div data-aos="fade-zoom-in" className="bride-parents">
-              Putri Keluarga Bapak Yunus Lande <br /> & Ibu Rosalina Sallata
-            </div>
-            <div style={{ cursor: "pointer" }} onClick={() => goToIG("bride")}>
-              <Instagram sx={{ fontSize: "1.5rem" }} />
+          <div className="d-flex flex-column justify-content-start align-items-center bride-layout">
+            <div className="brideword-area">
+              <div className="bride-name">
+                Golda
+              </div>
+              <hr className="name-divider" />
+              <div className="bride-fullname">Golda Lande</div>
+              <div className="bride-parents">
+                Daughter of <br /> Mr. Yunus Lande <br /> & <br /> Mrs. Rosalina
+                Sallata
+              </div>
+              <div
+                style={{ cursor: "pointer" }}
+                onClick={() => goToIG("bride")}
+              >
+                <Instagram sx={{ fontSize: "1.5rem" }} />
+              </div>
             </div>
           </div>
         </div>
