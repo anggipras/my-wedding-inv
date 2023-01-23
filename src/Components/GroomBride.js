@@ -34,9 +34,6 @@ function GroomBride({ currentId, vidCond }) {
       id="groom-bride"
       className="d-flex flex-column justify-content-center align-items-center GroomBride-layout"
     >
-      <div className="groomandbride-tobe">
-        Groom & Bride
-      </div>
       <div className="groomandbride-area mt-3">
         <div id="secondVideo">
           <video id="mySecondvideo" muted playsInline loop>
@@ -46,9 +43,7 @@ function GroomBride({ currentId, vidCond }) {
         <div className="d-flex justify-content-center align-items-center">
           <div className="d-flex flex-column justify-content-between align-items-center groom-layout">
             <div className="groomword-area">
-              <div className="groom-name">
-                Anggi
-              </div>
+              <div className="groom-name">Anggi</div>
               <hr className="name-divider" />
               <div className="groom-fullname">Bernardus Anggi Prastianto</div>
               <div className="groom-parents">
@@ -65,9 +60,7 @@ function GroomBride({ currentId, vidCond }) {
           </div>
           <div className="d-flex flex-column justify-content-start align-items-center bride-layout">
             <div className="brideword-area">
-              <div className="bride-name">
-                Golda
-              </div>
+              <div className="bride-name">Golda</div>
               <hr className="name-divider" />
               <div className="bride-fullname">Golda Lande</div>
               <div className="bride-parents">

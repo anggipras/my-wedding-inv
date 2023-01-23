@@ -221,12 +221,6 @@ body {
   /* animation: zoom-in-zoom-out 2.2s ease infinite; */
 }
 
-.groomandbride-tobe {
-  font-family: "Rochester", cursive;
-  font-size: 2.5rem;
-  text-align: center;
-}
-
 .groomandbride-area {
   display: flex;
   justify-content: center;
@@ -604,6 +598,16 @@ body {
 
 .custom-shape-divider-wishesgift-top .shape-fill {
   fill: #ffffff;
+}
+
+.closing-invitation {
+  position: relative;
+  font-family: "Quicksand", serif;
+  font-size: 1rem;
+  text-align: center;
+  color: white;
+  margin-bottom: 5rem;
+  padding: 0 2rem;
 }
 
 /** For mobile devices **/

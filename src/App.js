@@ -232,6 +232,10 @@ function App() {
               </div>
               <WeddingGift currentId={id} />
               <Wishes currentId={id} guestName={guestName} />
+              <div className="closing-invitation">
+                Thank you for celebrating our wedding with us! <br />
+                #AnggiGolda
+              </div>
             </div>
             <audio id="weddingAudio" loop>
               <source src={WeddingSong} type="audio/mpeg" />

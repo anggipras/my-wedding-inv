@@ -299,7 +299,7 @@ function Wishes({ currentId, guestName }) {
         </div>
 
         {totalPage > 0 ? (
-          <div className="wishes-content" style={{ marginBottom: "5rem" }}>
+          <div className="wishes-content">
             {wishesRespData()}
 
             <div style={{ borderTop: "1px solid gray" }} />
