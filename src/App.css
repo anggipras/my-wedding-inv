@@ -601,6 +601,8 @@ body {
 }
 
 .closing-invitation {
+  display: flex;
+  justify-content: center;
   position: relative;
   font-family: "Quicksand", serif;
   font-size: 0.7rem;
