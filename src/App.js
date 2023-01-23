@@ -233,8 +233,7 @@ function App() {
               <WeddingGift currentId={id} />
               <Wishes currentId={id} guestName={guestName} />
               <div className="closing-invitation">
-                Thank you for celebrating our wedding with us! <br />
-                #AnggiGolda
+                Thank you for celebrating our wedding with us! #AnggiGolda
               </div>
             </div>
             <audio id="weddingAudio" loop>

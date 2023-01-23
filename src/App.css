@@ -603,11 +603,11 @@ body {
 .closing-invitation {
   position: relative;
   font-family: "Quicksand", serif;
-  font-size: 1rem;
+  font-size: 0.7rem;
   text-align: center;
   color: white;
   margin-bottom: 5rem;
-  padding: 0 2rem;
+  padding: 0 0.5rem;
 }
 
 /** For mobile devices **/
