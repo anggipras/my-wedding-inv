@@ -4,7 +4,7 @@ import { YouTube } from "@mui/icons-material";
 function LiveStreaming() {
   const openYoutube = () => {
     window.open(
-      "https://www.youtube.com/channel/UCQAoujLV2ZSMfeHpvGorZOA",
+      "https://www.youtube.com/@gepsultrajemaatefrataanduo472/streams",
       "_blank"
     );
   };
